@@ -1,0 +1,80 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Count
+//  Description   : Accept number from user & count frequency as digit less than 6
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 29/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int Count(int iNo)
+{
+    int iDigit = 0;
+    int iCount = 0;
+
+    if (iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while (iNo > 0)
+    {
+        iDigit = iNo % 10;
+
+        if (iDigit < 6)
+        {
+            iCount++;
+        }
+        iNo = iNo / 10;
+    }
+    return iCount;
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = CountFour(iValue);
+
+    printf("%d", iRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 2395
+//  Output : 3
+//
+//  Input  : 1018
+//  Output : 3
+//
+//  Input  : 9440
+//  Output : 3
+//
+//  Input  : 96672
+//  Output : 1
+//
+////////////////////////////////////////////////////////////////////////////////

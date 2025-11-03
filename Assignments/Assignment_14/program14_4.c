@@ -1,0 +1,80 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountFour
+//  Description   : Accept number from user & count frequency of 4 in it
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 29/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int CountFour(int iNo)
+{
+    int iDigit = 0;
+    int iCount = 0;
+
+    if (iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while (iNo > 0)
+    {
+        iDigit = iNo % 10;
+
+        if (iDigit == 4)
+        {
+            iCount++;
+        }
+        iNo = iNo / 10;
+    }
+    return iCount;
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = CountFour(iValue);
+
+    printf("%d", iRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 2395
+//  Output : 0
+//
+//  Input  : 1018
+//  Output : 0
+//
+//  Input  : 9440
+//  Output : 2
+//
+//  Input  : 922432
+//  Output : 1
+//
+////////////////////////////////////////////////////////////////////////////////

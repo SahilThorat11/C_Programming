@@ -1,0 +1,81 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : MultiDigit
+//  Description   : Accept number from user & return multiplication of all digits
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 29/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int MultiDigit(int iNo)
+{
+    int iDigit = 0;
+    int iMulti = 1;
+
+    if (iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while (iNo != 0)
+    {
+        iDigit = iNo % 10;
+
+        if (iDigit != 0)
+        {
+            iMulti = iMulti * iDigit;
+        }
+
+        iNo = iNo / 10;
+    }
+    return iMulti;
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = MultiDigit(iValue);
+
+    printf("%d", iRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 2395
+//  Output : 270
+//
+//  Input  : 1018
+//  Output : 8
+//
+//  Input  : 9440
+//  Output : 144
+//
+//  Input  : 922432
+//  Output : 864
+//
+////////////////////////////////////////////////////////////////////////////////

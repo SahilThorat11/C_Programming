@@ -1,0 +1,80 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountRange
+//  Description   : Accept number from user & return the count digit in 3 & 7
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 29/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int CountRange(int iNo)
+{
+    int iDigit = 0;
+    int iCount = 0;
+
+    if (iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    while (iNo != 0)
+    {
+        iDigit = iNo % 10;
+
+        if (iDigit > 3 && iDigit < 7)
+        {
+            iCount++;
+        }
+        iNo = iNo / 10;
+    }
+    return iCount;
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = CountRange(iValue);
+
+    printf("%d", iRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 2395
+//  Output : 1
+//
+//  Input  : 1018
+//  Output : 0
+//
+//  Input  : 4521
+//  Output : 2
+//
+//  Input  : 9922
+//  Output : 0
+//
+////////////////////////////////////////////////////////////////////////////////

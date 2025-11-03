@@ -1,0 +1,71 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : sum_of_factors
+//  Description   : Accept number from user & print all factors Summation
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 28/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int sum_of_factors(int number)
+{
+    int iCnt = 0;
+    int iSum = 0;
+
+    for (iCnt = 1; iCnt <= number; iCnt++)
+    {
+        if (number % iCnt == 0)
+        {
+            iSum = iSum + iCnt;
+        }
+    }
+
+    return iSum;
+
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = sum_of_factors(iValue);
+
+    printf("Total factors Addition is : %d\n", iRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 10
+//  Output : Total factors Addition is : 18
+//
+//  Input  : 20
+//  Output : Total factors Addition is : 42
+//
+//  Input  : 15
+//  Output : Total factors Addition is : 24
+//
+////////////////////////////////////////////////////////////////////////////////

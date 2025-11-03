@@ -1,0 +1,71 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Count_factors
+//  Description   : Accept number from user & print all factors count
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 28/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int Count_factors(int number)
+{
+    int iCnt = 0;
+    int iCount = 0;
+
+    for (iCnt = 1; iCnt <= number; iCnt++)
+    {
+        if (number % iCnt == 0)
+        {
+            printf(" %d ", iCnt);
+            iCount++;
+        }
+    }
+
+    return iCount;
+
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = Count_factors(iValue);
+
+    printf("\nTotal factors is : %d", iRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 10
+//  Output : 1  2  5  10
+//           Total factors is : 4
+//
+//  Input  :
+//  Output : 1  2  4  5  10  20
+//           Total factors is : 6
+//
+////////////////////////////////////////////////////////////////////////////////

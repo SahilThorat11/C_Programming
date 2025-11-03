@@ -1,0 +1,71 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+#include <stdbool.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : is_disisible_by_five
+//  Description   : Accept number from user & check number divisible by 5
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 28/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+bool is_disisible_by_five(int number)
+{
+    if (number % 5 == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    bool bRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    bRet = is_disisible_by_five(iValue);
+
+    if (bRet)
+    {
+        printf("yes it is divisible five %d", bRet);
+    }
+    else
+    {
+        printf("No it is not divisible five %d", bRet);
+    }
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 12
+//  Output : No it is not divisible five 0
+//
+//  Input  : 10
+//  Output : yes it is divisible five 1
+//
+////////////////////////////////////////////////////////////////////////////////

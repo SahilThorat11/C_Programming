@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Display
+//  Description   : Accept number from user & display below pattern(**##)
+//  Input         : Integer
+//  Output        : * #
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 27/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void Display(int iNo)
+{
+    int iCnt = 0;
+
+    // Updater
+    if (iNo <= 0)
+    {
+        iNo = -iNo;
+    }
+
+    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        printf(" * ", iNo);
+    }
+    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        printf(" # ", iNo);
+    }
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    Display(iValue);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 5
+//  Output : *  *  *  *  *  #  #  #  #  #
+//
+//  Input  : 6
+//  Output : *  *  *  *  *  *  #  #  #  #  #  #
+//
+//  Input  : -5
+//  Output : *  *  *  *  *  #  #  #  #  #
+//
+//  Input  : 2
+//  Output : *  *    #  #
+//
+////////////////////////////////////////////////////////////////////////////////

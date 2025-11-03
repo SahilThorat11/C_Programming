@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : percentage
+//  Description   : Accept total & obtained mark from user & Calculate percentage
+//  Input         : Integer
+//  Output        : Float
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 27/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+float percentage(int iNo1, int iNo2)
+{
+    float fResult = 0.0;
+
+    if (iNo1 == 0)
+    {
+        return 0.0f;
+    }
+    fResult = ((float)iNo2 / (float)iNo1) * 100;
+
+    return fResult;
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue1 = 0;
+    int iValue2 = 0;
+    float fRet = 0.0;
+
+    printf("Plese enter total marks : ");
+    scanf("%d", &iValue1);
+
+    printf("Please enter obtained marks : ");
+    scanf("%d", &iValue2);
+
+    fRet = percentage(iValue1, iValue2);
+
+    printf("Percentage is : %.2f%%\n", fRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 1000 745
+//  Output : Percentage is : 74.50%
+//
+//  Input  : 100 75
+//  Output : Percentage is : 75.00%
+//
+////////////////////////////////////////////////////////////////////////////////

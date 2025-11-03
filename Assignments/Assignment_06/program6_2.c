@@ -1,0 +1,72 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+#include <stdbool.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : ChkGreater
+//  Description   : Accept number from user & check greater 100 or not
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 27/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+bool ChkGreater(int iNo)
+{
+    if (iNo > 100)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char iValue = 0;
+
+    bool bRet = false;
+
+    printf("Plese enter number : ");
+    scanf("%d", &iValue);
+
+    bRet = ChkGreater(iValue);
+
+    if (bRet)
+    {
+        printf("%d is Greater number ", iValue);
+    }
+    else
+    {
+        printf("%d is Smaller number ", iValue);
+    }
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 101
+//  Output : 101 is Greater number
+//
+//  Input  : 39
+//  Output : 39 is Smaller number
+//
+////////////////////////////////////////////////////////////////////////////////

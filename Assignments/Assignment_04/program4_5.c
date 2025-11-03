@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : SumNonFact
+//  Description   : Accept number from user & display Non factors Summation
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 17/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int FactDiff(int iNo)
+{
+    int iCnt = 0;
+    int iSumFact = 0;
+    int iSumNonFact = 0;
+
+    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        if (iNo % iCnt == 0)
+        {
+            iSumFact = iSumFact + iCnt;
+        }
+        else
+        {
+            iSumNonFact = iSumNonFact + iCnt;
+        }
+    }
+    return (iSumFact - iSumNonFact);
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter number : ");
+    scanf("%d", &iValue);
+
+    iRet = FactDiff(iValue);
+
+    printf("%d", iRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 12
+//  Output : 50
+//
+//  Input  : 13
+//  Output : 77
+//
+//  Input  : 10
+//  Output : 37
+//
+////////////////////////////////////////////////////////////////////////////////

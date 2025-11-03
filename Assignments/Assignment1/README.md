@@ -12,7 +12,7 @@ This folder contains warmup codes which are:-
 
 4.To check given number is divisible by 5 or not
 
-5.Display number of * by taking input form user.
+5.Display number of * by taking input form user
 
 
 To execute these codes commands used were:-

@@ -1,0 +1,72 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Factorial
+//  Description   : Accept number from user & print factorial of number
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 27/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int Factorial(int iNo)
+{
+    int iCnt = 0;
+    int iFact = 1;
+
+    // Updater
+    if (iNo <= 0)
+    {
+        iNo = -iNo;
+    }
+
+    for (iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        iFact = iFact * iCnt;
+    }
+    return iFact;
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = Factorial(iValue);
+
+    printf("Factorial of number is %d", iRet);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 5
+//  Output : Factorial of number is 120
+//
+//  Input  : -5
+//  Output : Factorial of number is 120
+//
+//  Input  : 4
+//  Output : Factorial of number is 24
+//
+////////////////////////////////////////////////////////////////////////////////

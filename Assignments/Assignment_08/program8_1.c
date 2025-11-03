@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Number
+//  Description   : Accept num.from user & print num small(50),medium(100),large
+//  Input         : Integer
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 27/10/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void Number(int iNo)
+{
+    // Updater
+    if (iNo <= 0)
+    {
+        iNo = -iNo;
+    }
+
+    if (iNo <= 50)
+    {
+        printf("%d is small number", iNo);
+    }
+    else if (iNo <= 100)
+    {
+        printf("%d is medium number", iNo);
+    }
+    else
+    {
+        printf("%d is large number", iNo);
+    }
+    printf("\n");
+} // End Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    Number(iValue);
+
+    return 0;
+} // End main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 15
+//  Output : 15 is small number
+//
+//  Input  : 75
+//  Output : 75 is medium number
+//
+//  Input  : 105
+//  Output : 105 is large number
+//
+////////////////////////////////////////////////////////////////////////////////

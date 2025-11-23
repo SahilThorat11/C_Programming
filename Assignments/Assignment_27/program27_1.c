@@ -9,7 +9,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  Function Name : Pattern
-//  Description   : Accept two numbers from user and print given pattern. 
+//  Description   : Accept two numbers from user as Row and Column and print 
+//                  given pattern on screeen. 
 //  Input         : Integer, Integer
 //  Output        : void
 //  Author        : Sahil Rajaram Thorat

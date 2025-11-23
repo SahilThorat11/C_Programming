@@ -1,4 +1,4 @@
-# Assignment 29 :
+# Assignment 30 :
 
     This folder contains problems related to Pattern printing in which input is taken from user as a Integer, problems are:-
 

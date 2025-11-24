@@ -1,17 +1,18 @@
-Assignment 4 :
+# Assignment 4 :
 
 This folder contains all the warmup codes which are :-
 
 
-Used to multiply all the factors of the number
+            1.Used to multiply all the factors of the number
 
-Used to display factors in Reverse order
+            2.Used to display factors in Reverse order
 
-Used to display non factors of a number
+            3.Used to display non factors of a number
 
-Used to display non factors of a number
+            4.Used to display non factors of a number
 
-Used to display difference of sum of factors and non factors.
+            5.Used to display difference of sum of factors and non factors.
+
 
 To execute these codes commands used were:-
 

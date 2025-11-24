@@ -1,20 +1,20 @@
-Assignment 10 :
+# Assignment 10 :
 
 This folder contains Warmup codes and their time complexities which are:-
 
 
-Calculate area of circle by accepting radius from user
+        1.Calculate area of circle by accepting radius from user
 
-Calculate area of rectangle by accepting width and height from user
+        2.Calculate area of rectangle by accepting width and height from user
 
-Convert kilomerter to meter
+        3.Convert kilomerter to meter
 
-Convert fahrenheit to celsius
+        4.Convert fahrenheit to celsius
 
-Convert Square feet to square meter.
+        5.Convert Square feet to square meter.
+
 
 Commands used to execute these codes:-
-
 
 gcc filename.c -o myexe
 

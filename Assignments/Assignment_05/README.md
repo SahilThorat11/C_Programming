@@ -1,17 +1,18 @@
-Assignment 5 :
+# Assignment 5 :
 
 This folder contains all the warmup codes which are:-
 
 
-Used to check even or odd number
+        1.Used to check even or odd number
 
-Display largest number among two
+        2.Display largest number among two
 
-To check given year is leap or not
+        3.To check given year is leap or not
 
-To check given number is positive, negative or zero
+        4.To check given number is positive, negative or zero
 
-To display largest among 3 numbers.
+        5.To display largest among 3 numbers.
+
 
 To execute these codes commands used were:-
 

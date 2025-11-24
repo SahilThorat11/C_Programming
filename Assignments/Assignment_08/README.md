@@ -1,19 +1,19 @@
-Assignment 8 :
+# Assignment 8 :
 
 
 This folder contains Warmup codes and their time complexities which are:-
 
 
 
-Accept the number from user and print the appropriate string according to the numbers range
+        1.Accept the number from user and print the appropriate string according to the numbers range
 
-Accept digit from user and print it in words
+        2.Accept digit from user and print it in words
 
-Find factorial of number given by user
+        3.Find factorial of number given by user
 
-Accept number from user and display its table
+        4.Accept number from user and display its table
 
-Accept number from user and print its table in reverse order.
+        5.Accept number from user and print its table in reverse order.
 
 
 Commands used to execute these codes:-

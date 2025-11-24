@@ -1,20 +1,20 @@
-Assignment 3 :
+# Assignment 3 :
 
 This folder contains my warmup codes which are :-
 
 
-to print even numbers
+        1.To print even numbers
 
-To display factors of numbers
+        2.To display factors of numbers
 
-To display Even factors of numbers
+        3.To display Even factors of numbers
 
-To convert uppercase character to lowercase character and vice versa
+        4.To convert uppercase character to lowercase character and vice versa
 
-To check the given input character is vowel or not.
+        5.To check the given input character is vowel or not.
+
 
 To execute these codes we use these commands
-
 
 gcc filename.c -o myexe myexe
 

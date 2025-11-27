@@ -1,4 +1,4 @@
-# Problems_On_Number:
+# Problems_On_String:
 
   This folder contains all problems related to the String.
 

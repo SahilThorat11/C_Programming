@@ -2,33 +2,30 @@
 
   This folder contains all problems related to the String.
 
-
-    commands used to execute this files codes are:-
+    Compile :
 
     gcc File_Name.c -o Myexe
 
-    Myexe.exe
+    Execuite :
+    
+    ./Myexe      # Linux / macOS
+    Myexe.exe    # Windows
 
 
+        🎯 Purpose of This Folder:
 
-└── Logical_Programs 
+            These programs help you practice:
 
-    └── Problems_On_String
+            ✔️ Character validation
 
-        ├── Program01.c
+            ✔️ String traversal
 
-        ├── Program02.c
+            ✔️ String transformations
 
-        ├── Program03.c
+            ✔️ Counting various elements within strings
 
-        ├── Program04.c
+            ✔️ ASCII-based operations
 
-        ├── Program05.c
+            ✔️ Searching and comparing strings
 
-        ├──       .
-
-        ├──       .
-
-        ├──       .
-        
-        ├── README.md
+            ✔️ Building logical thinking in C programming

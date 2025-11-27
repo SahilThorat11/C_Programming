@@ -1,15 +1,6 @@
 # Problems_On_String:
 
-  This folder contains all problems related to the String.
-
-    Compile :
-
-    gcc File_Name.c -o Myexe
-
-    Execuite :
-    
-    ./Myexe      # Linux / macOS
-    Myexe.exe    # Windows
+  This folder contains all problems related to the String
 
 
         🎯 Purpose of This Folder:
@@ -29,3 +20,14 @@
             ✔️ Searching and comparing strings
 
             ✔️ Building logical thinking in C programming
+
+
+
+    Compile :
+
+    gcc File_Name.c -o Myexe
+
+    Execuite :
+    
+    ./Myexe      # Linux / macOS
+    Myexe.exe    # Windows

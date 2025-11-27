@@ -23,11 +23,22 @@
 
 
 
-    Compile :
+            Logical_Programs
+            └── Problems_On_String
+                ├── Program01.c
+                ├── Program02.c
+                ├── Program03.c
+                ├── Program04.c
+                ├── Program05.c
+                ├── ...
+                └── README.md
 
-    gcc File_Name.c -o Myexe
 
-    Execuite :
-    
-    ./Myexe      # Linux / macOS
-    Myexe.exe    # Windows
+                  Compile :
+
+                  gcc File_Name.c -o Myexe
+
+                  Execuite :
+                  
+                  ./Myexe      # Linux / macOS
+                  Myexe.exe    # Windows

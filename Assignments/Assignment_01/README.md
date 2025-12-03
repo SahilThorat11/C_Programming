@@ -9,6 +9,7 @@ Welcome to Assignment 01, a collection of simple yet essential C programs design
 --- 
 
 🚀 Programs Overview :-
+
         🔹 Program1_1.c
 
         👉 Performs division of two numbers provided by the user.
@@ -49,25 +50,17 @@ Welcome to Assignment 01, a collection of simple yet essential C programs design
 
 ---
 
-🎯 Learning Outcomes
+🎯 Learning Outcomes :- 
 
-By completing these programs, you will practice:
+    By completing these programs, you will practice:
 
-✨ Basic input and output
+    ✨ Basic input and output
 
-🔢 Arithmetic operations
+    🔢 Arithmetic operations
 
-🔁 Looping structures
+    🔁 Looping structures
 
-🔍 Conditional statements
-
-🧩 Logic building
-
-👍 You're All Set!
-
----
-
-These warm-up programs form the foundation for more advanced C programming. Keep practicing and exploring! 🚀
+    🔍 Conditional statements
 
 ---
 

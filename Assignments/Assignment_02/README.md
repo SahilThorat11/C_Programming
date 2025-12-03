@@ -1,27 +1,65 @@
+<h1 align="center" style="color:#00eaff;">🌟📘 Assignment 02 – Warm-Up C Programs</h1>
 
-# Assignment 2 :
+---
 
-This folder contains warmup codes which are:-
+## 🌑 Overview
+
+Assignment 02 contains another set of warm-up C programs designed to help you practice loops, conditions, user input handling, and basic logic building.
+
+These programs continue strengthening your fundamentals through simple but important exercises.
+
+---
+
+## 🚀 Programs Overview :-
+
+### 🔹 **Program2_1.c**
+👉 Prints the **number of stars** specified by the user.
+
+### 🔹 **Program2_2.c**
+👉 Prints `*` (asterisks) by **taking input** from the user.
+
+### 🔹 **Program2_3.c**
+👉 Displays a **specific string** based on a given condition.
+
+### 🔹 **Program2_4.c**
+👉 Displays the **same number** repeated as a **multiple of another number**.
+
+### 🔹 **Program2_5.c**
+👉 Checks whether a given number is **even or odd**.
+
+---
+
+## 🛠️ How to Compile & Run the Programs:-
+
+### ✔️ **Step 1: Compile**
+
+    gcc filename.c -o myexe
+
+### ✔️ Step 2: Run
+    ./myexe
 
 
-            1.Used to prime number of stars given by user
+💡 Replace filename.c with the actual file name you want to execute.
 
-            2.Used print * by taking input from user
+---
 
-            3.Display string based on condition
+### 🎯 Learning Outcomes:-
 
-            4.used to display same number in multiple of another number
+    By working on these programs, you will practice:
 
-            5.used to check weather number is even or odd.
+    ✨ Using loops
+    🔢 Working with user input
+    🔁 Repetitive logi
+    🔍 Conditional operations
+    🧠 Basic decision-making in C
 
-
-To execute these codes I used commands:-
-
-
-gcc filename.c -o myexe :- to compile
-
-
-myexe :- to run
-
-
-└── Assignment └── Assignment_02 ├── Program2_1.c ├── Program2_2.c ├── Program2_3.c ├── Program2_4.c ├── Program2_5.c └── README.md
+### 📁 Folder Structure :-
+        
+        Assignment
+        └── Assignment_02
+            ├── Program2_1.c
+            ├── Program2_2.c
+            ├── Program2_3.c
+            ├── Program2_4.c
+            ├── Program2_5.c
+            └── README.md

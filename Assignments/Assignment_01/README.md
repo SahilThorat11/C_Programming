@@ -45,9 +45,9 @@ Welcome to Assignment 01, a collection of simple yet essential C programs design
 
             ./myexe
 
----
-
 💡 Replace filename.c with the program file you want to execute.
+
+---
 
 🎯 Learning Outcomes
 
@@ -65,16 +65,19 @@ By completing these programs, you will practice:
 
 👍 You're All Set!
 
+---
+
 These warm-up programs form the foundation for more advanced C programming. Keep practicing and exploring! 🚀
 
 ---
 
-📁 Folder Structure
-Assignment
-└── Assignment_01
-    ├── Program1_1.c
-    ├── Program1_2.c
-    ├── Program1_3.c
-    ├── Program1_4.c
-    ├── Program1_5.c
-    └── README.md
+📁 Folder Structure:-
+
+        Assignment
+        └── Assignment_01
+            ├── Program1_1.c
+            ├── Program1_2.c
+            ├── Program1_3.c
+            ├── Program1_4.c
+            ├── Program1_5.c
+            └── README.md

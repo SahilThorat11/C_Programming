@@ -1,0 +1,73 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : strCpyRev
+//  Description   : Accept String from user & copy that characters of that string
+//                  into another string in reverse order.
+//  Input         : Character
+//  Output        : Void
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 03/12/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void strCpyRev(char *str, char *dest)
+{
+    char *start = str;
+    int len = 0;
+
+    while (*str != '\0')
+    {
+        str++;
+        len++;
+    }
+    str--;
+
+    while (len > 0)
+    {
+        *dest = *str;
+        dest++;
+        str--;
+        len--;
+    }
+    *dest = '\0';
+
+} // End of function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[30];
+    char Brr[30];
+
+    printf("Enter the String :\n");
+    scanf("%[^\n]", Arr);
+
+    strCpyRev(Arr, Brr);
+
+    printf("%s", Brr);
+
+    return 0;
+
+} // End of main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input   : Marvellous Python
+//  Ouptput : nohtyP suollevraM
+//
+////////////////////////////////////////////////////////////////////////////////

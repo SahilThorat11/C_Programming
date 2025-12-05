@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountCapital
+//  Description   : Accept String from user and count number of capital character.
+//  Input         : Character
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 30/11/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int CountCapital(char *str)
+{
+    int iCount = 0;
+
+    while(*str != '\0')
+    {
+        if((*str >= 'A') && (*str <= 'Z'))
+        {
+            iCount++;
+        }
+        str++;
+    }
+
+    return iCount;
+} // End of function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[20];
+    int iRet = 0;
+
+    printf("Entre the String : \n");
+    scanf("%[^'\n']s", Arr);
+
+    iRet = CountCapital(Arr);
+
+    printf("Capital Letters are : %d\n", iRet);
+
+    return 0;
+} // End of main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input   : Marvellolus Multi OS
+//  Ouptput : 
+//            Capital Letters are : 4
+//
+//  Input   : Jay Ganesh
+//  Ouptput : 
+//            Capital Letters are : 3
+//
+////////////////////////////////////////////////////////////////////////////////

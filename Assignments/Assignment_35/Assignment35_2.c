@@ -1,0 +1,69 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header file
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : CountCapital
+//  Description   : Accept String from user and count number of Small character.
+//  Input         : Character
+//  Output        : Integer
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 30/11/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int CountSmall(char *str)
+{
+    int iCount = 0;
+
+    while(*str != '\0')
+    {
+        if((*str >= 'a') && (*str <= 'z'))
+        {
+            iCount++;
+        }
+        str++;
+    }
+
+    return iCount;
+} // End of function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[20];
+    int iRet = 0;
+
+    printf("Entre the String : \n");
+    scanf("%[^'\n']s", Arr);
+
+    iRet = CountSmall(Arr);
+
+    printf("Small Letters are : %d\n", iRet);
+
+    return 0;
+} // End of main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input   : Marvellolus
+//  Ouptput : 
+//            Capital Letters are : 9
+//
+//  Input   : Ganesh
+//  Ouptput : 
+//            Capital Letters are : 5
+//
+////////////////////////////////////////////////////////////////////////////////

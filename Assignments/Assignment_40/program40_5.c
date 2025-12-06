@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : Display
+//  Description   : Prints Small Letters using recursion.
+//  Input         : Integer
+//  Output        : void
+//  Author        : Sahil Rajaram Thorat
+//  Date          : 06/12/2025
+//
+////////////////////////////////////////////////////////////////////////////////
+
+void Display(int iNo)
+{
+    static char ch = 'a';     // Counter for recursive calls
+    static int iCount = 0;
+
+    if(iCount < iNo)            
+    {
+        printf("%c\t", ch);
+        ch++;
+        iCount++;
+        Display(iNo);             // Recursive call
+    }
+
+} // End of Display
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry Point Function: main
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter the number : \n");
+    scanf("%d", &iValue);
+
+    Display(iValue);                
+
+    return 0;
+
+} // End of main
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Test Case
+//
+//  Enter the number :
+//                  7
+//                   a       b       c       d       e       f       g
+//  Enter the number :
+//                  6
+//                   a       b       c       d       e       f 
+//
+////////////////////////////////////////////////////////////////////////////////

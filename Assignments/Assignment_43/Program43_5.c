@@ -62,7 +62,7 @@ void SumDigits(PNODE first)
 
         printf("%d\t", iSum);
 
-        first = first->Next;
+        first = first->Next;    
     }
     printf("\n");
 }

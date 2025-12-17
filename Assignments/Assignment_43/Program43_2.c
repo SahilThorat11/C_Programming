@@ -74,7 +74,6 @@ void DisplayPrime(PNODE first)
 int main()
 {
     PNODE head = NULL;
-    int iRet = 0;
 
     InsertFirst(&head, 89);
     InsertFirst(&head, 22);

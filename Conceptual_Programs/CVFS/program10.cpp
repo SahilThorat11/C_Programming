@@ -7,7 +7,7 @@ int main()
     #ifdef _WIN32        // If windows
         system("dir");
     #else                // If linux/macOS
-        system("ls")
+        system("ls");
     #endif
 
     return 0;

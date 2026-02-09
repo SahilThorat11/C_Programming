@@ -12,12 +12,7 @@ void Display(int iNo)
 
 int main()
 {
-    int iValue = 0;
-
-    printf("Enter the number : \n");
-    scanf("%d", &iValue);
-
-    Display(iValue);
+    Display(5);
 
     return 0;
 }

@@ -1,25 +1,20 @@
 #include<stdio.h>
 
-void Display(int iNo)
+void Display()
 {
     static int i = 1;
 
-    if(i <= iNo)
+    if(i <= 5)
     {
         printf("%d\t", i);
         i++;
-        Display(iNo);
+        Display();
     }
 }
 
 int main()
 {
-    int iValue = 0;
-
-    printf("Enter the number : \n");
-    scanf("%d", &iValue);
-
-    Display(iValue);
+    Display();
 
     return 0;
 }

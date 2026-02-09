@@ -1,27 +1,22 @@
 #include<stdio.h>
 
-void Display(int iNo)
+void Display()
 {
     static int i = 1;
     static char ch = 'A';
 
-    if(i <= iNo)
+    if(i <= 6)
     {
         printf("%c\t", ch);
         i++;
         ch++;
-        Display(iNo);
+        Display();
     }
 }
 
 int main()
 {
-    int iValue = 0;
-
-    printf("Enter the number : \n");
-    scanf("%d", &iValue);
-
-    Display(iValue);
+    Display();
 
     return 0;
 }

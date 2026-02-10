@@ -1,0 +1,63 @@
+
+////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   FindLarge
+//  Description     :   Function to check whether which number is
+//                      bigger among two.
+//  Input           :   Integer
+//  Output          :   Integer
+//  Name of Author  :   Sahil Rajaram Thorat
+//  Date            :   10/02/2026
+//
+////////////////////////////////////////////////////////////////////
+
+int FindLarge(int iNo1, int iNo2)
+{
+    if(iNo1 > iNo2)
+    {
+        return iNo1;
+    }
+
+    return iNo2;
+    
+} // End of FindLarge Function
+
+////////////////////////////////////////////////////////////////////
+//
+// Entry point Function of Application
+//
+////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue1 = 0, iValue2 = 0, iRet = 0;
+
+    printf("Enter the 1st number : ");
+    scanf("%d", &iValue1);
+
+    printf("Enter the 2nd number : ");
+    scanf("%d", &iValue2);
+
+    iRet = FindLarge(iValue1, iValue2);
+
+    printf("Largest value is : %d\n", iRet);
+
+    return 0;
+} // End of main Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 11 22
+//  Output : 22
+//
+////////////////////////////////////////////////////////////////////////////////

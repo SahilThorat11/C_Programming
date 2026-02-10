@@ -1,0 +1,70 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+#include<stdbool.h>
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name   : CheckEvenOdd
+//  Description     : program to check whether the given number is Even or Odd
+//  Input           : Integer
+//  Output          : Integer
+//  Author          : Sahil Rajaram Thorat
+//  Date            : 10/02/2026
+//
+////////////////////////////////////////////////////////////////////////////////
+
+bool CheckEvenOdd(int iNo)
+{
+    if(iNo % 2 == 0)
+    {
+        return true;
+    }
+
+    return false;
+    
+}   // End of CheckEvenOdd Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point Function for the application
+//
+////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    bool bRet = false;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    bRet = CheckEvenOdd(iValue);
+
+    if(bRet == true)
+    {
+        printf("Given number is Even.");
+    }
+    else
+    {
+        printf("Given number is Odd.");
+    }
+
+    return 0;
+}   // End of main Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 11
+//  Output : Given number is Odd.
+//
+//  Input  : 10
+//  Output : Given number is Even.
+//
+////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,63 @@
+
+////////////////////////////////////////////////////////////////////
+//
+//  Required Header Files
+//
+////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+////////////////////////////////////////////////////////////////////
+//
+//  Function Name   :   SumDigits
+//  Description     :   Function to calculate sum of digits from 
+//                      given number.
+//  Input           :   Integer
+//  Output          :   Integer
+//  Name of Author  :   Sahil Rajaram Thorat
+//  Date            :   10/02/2026
+//
+////////////////////////////////////////////////////////////////////
+
+int SumDigits(int iNo)
+{
+    int iDigit = 0, iSum = 0;
+
+    while(iNo != 0)
+    {
+        iDigit = iNo % 10;
+        iSum = iSum + iDigit;
+        iNo = iNo / 10;
+    }
+
+    return iSum;
+} // End of SumDigits Function
+
+////////////////////////////////////////////////////////////////////
+//
+// Entry point Function of Application
+//
+////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0, iRet =0;
+
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = SumDigits(iValue);
+
+    printf("Summation of all digits from given number is : %d\n", iRet);
+
+    return 0;
+} // End of main Function
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Testcases succesfully handle by the application
+//
+//  Input  : 1234
+//  Output : 10
+//
+////////////////////////////////////////////////////////////////////////////////

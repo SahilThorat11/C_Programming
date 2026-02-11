@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void Display(int iNo)
+int Display(int iNo)
 {
     int iCnt = 0, iCount = 0;
 

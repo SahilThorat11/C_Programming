@@ -1,23 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
 struct node
 {
     int data;
-    struct node *next;
+    struct node * next;
 };
 
 typedef struct node NODE;
-typedef struct node *PNODE;
-typedef struct node **PPNODE;
+typedef struct node * PNODE;
+typedef struct node ** PPNODE;
 
-void InsertFirst(PPNODE first, int No)
+void InsertFirst(PPNODE first, int iNO)
 {
     PNODE newn = NULL;
 
     newn = (PNODE)malloc(sizeof(NODE));
 
-    newn -> data = No;
+    newn -> data = iNO;
     newn -> next = NULL;
 
     if(*first == NULL)
@@ -31,7 +32,7 @@ void InsertFirst(PPNODE first, int No)
     }
 }
 
-void Dispaly(PNODE first)
+void Display(PNODE first)
 {
     PNODE temp = NULL;
 
@@ -51,7 +52,6 @@ void Dispaly(PNODE first)
 int Count(PNODE first)
 {
     int iCount = 0;
-
     PNODE temp = NULL;
 
     temp = first;
@@ -61,53 +61,57 @@ int Count(PNODE first)
         iCount++;
         temp = temp -> next;
     }
-
+    
     return iCount;
 }
 
-void SumDigits(PNODE first)
+int LastOccur(PNODE first, int iNo)
 {
-    int iNo = 0, iDigit = 0, iSum = 0;
-
-    PNODE temp = NULL;
-
-    temp = first;
+    PNODE temp = first;
+    int iPos = 1;
+    int iLastPos = 0;
 
     while(temp != NULL)
     {
-        iDigit = 0;
-        iSum = 0;
-
-        iNo = temp -> data;
-
-        while(iNo != 0)
+        if(temp->data == iNo)
         {
-            iDigit = iNo % 10;
-            iSum = iSum + iDigit;
-            iNo = iNo / 10;
+            iLastPos = iPos;
         }
-        
-        printf("| %d | -> ", iSum);
         temp = temp->next;
+        iPos++;
     }
+
+    return iLastPos;
 }
 
 int main()
 {
-    int iRet = 0, iValue = 0;
-    PNODE head = NULL; 
+    int iRet = 0, iValue;
+    PNODE head = NULL;
 
-    InsertFirst(&head, 111);
-    InsertFirst(&head, 101);
+    InsertFirst(&head, 75);
+    InsertFirst(&head, 21);
     InsertFirst(&head, 51);
     InsertFirst(&head, 21);
     InsertFirst(&head, 11);
 
-    Dispaly(head);
+    Display(head);
     iRet = Count(head);
-    printf("Number of nodes in linkedlist are : %d\n", iRet);
+    printf("Number of nodes are : %d\n\n", iRet);
 
-    SumDigits(head);
+    printf("Enter the number to find : ");
+    scanf("%d", &iValue);
+
+    iRet = LastOccur(head, iValue);
+
+    if(iRet == 0)
+    {
+        printf("The given number is not present in the linked list");
+    }
+    else
+    {
+        printf("Last occurence of %d is at %d Position.\n",iValue, iRet);
+    }
 
     return 0;
 }

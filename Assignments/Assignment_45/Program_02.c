@@ -1,23 +1,24 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
 struct node
 {
     int data;
-    struct node *next;
+    struct node * next;
 };
 
 typedef struct node NODE;
-typedef struct node *PNODE;
-typedef struct node **PPNODE;
+typedef struct node * PNODE;
+typedef struct node ** PPNODE;
 
-void InsertFirst(PPNODE first, int No)
+void InsertFirst(PPNODE first, int iNO)
 {
     PNODE newn = NULL;
 
     newn = (PNODE)malloc(sizeof(NODE));
 
-    newn -> data = No;
+    newn -> data = iNO;
     newn -> next = NULL;
 
     if(*first == NULL)
@@ -31,7 +32,7 @@ void InsertFirst(PPNODE first, int No)
     }
 }
 
-void Dispaly(PNODE first)
+void Display(PNODE first)
 {
     PNODE temp = NULL;
 
@@ -51,7 +52,6 @@ void Dispaly(PNODE first)
 int Count(PNODE first)
 {
     int iCount = 0;
-
     PNODE temp = NULL;
 
     temp = first;
@@ -61,51 +61,59 @@ int Count(PNODE first)
         iCount++;
         temp = temp -> next;
     }
-
+    
     return iCount;
 }
 
-void CountDigits(PNODE first)
+int FirstOcc(PNODE first, int iNo)
 {
-    int iNo = 0, iCount = 0;
-
     PNODE temp = NULL;
+    int iPos = 1;
 
     temp = first;
 
     while(temp != NULL)
     {
-        iCount = 0;
-
-        iNo = temp -> data;
-
-        while(iNo > 0)
+        if(temp -> data == iNo)
         {
-            iCount++;
-            iNo = iNo / 10;
+            return iPos;
         }
-        
-        printf("| %d | -> ", iCount);
-        temp = temp->next;
+
+        temp = temp -> next;
+        iPos++;
     }
+
+    return 0;
 }
 
 int main()
 {
-    int iRet = 0, iValue = 0;
-    PNODE head = NULL; 
+    int iRet = 0, iValue;
+    PNODE head = NULL;
 
-    InsertFirst(&head, 111);
-    InsertFirst(&head, 101);
+    InsertFirst(&head, 112);
+    InsertFirst(&head, 74);
     InsertFirst(&head, 51);
-    InsertFirst(&head, 21);
+    InsertFirst(&head, 22);
     InsertFirst(&head, 11);
 
-    Dispaly(head);
+    Display(head);
     iRet = Count(head);
-    printf("Number of nodes in linkedlist are : %d\n", iRet);
+    printf("Number of nodes are : %d\n\n", iRet);
 
-    CountDigits(head);
+    printf("Enter the number to find : ");
+    scanf("%d", &iValue);
+
+    iRet = FirstOcc(head, iValue);
+
+    if(iRet == 0)
+    {
+        printf("The given number is not present in linkedList\n");
+    }
+    else
+    {
+        printf("First occurence of %d at %d Position\n", iValue, iRet);
+    }
 
     return 0;
 }

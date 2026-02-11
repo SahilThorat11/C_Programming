@@ -5,20 +5,20 @@
 struct node
 {
     int data;
-    struct node *next;
+    struct node * next;
 };
 
 typedef struct node NODE;
-typedef struct node *PNODE;
-typedef struct node **PPNODE;
+typedef struct node * PNODE;
+typedef struct node ** PPNODE;
 
-void InsertFirst(PPNODE first, int No)
+void InsertFirst(PPNODE first, int iNO)
 {
     PNODE newn = NULL;
 
     newn = (PNODE)malloc(sizeof(NODE));
 
-    newn -> data = No;
+    newn -> data = iNO;
     newn -> next = NULL;
 
     if(*first == NULL)
@@ -32,7 +32,7 @@ void InsertFirst(PPNODE first, int No)
     }
 }
 
-void Dispaly(PNODE first)
+void Display(PNODE first)
 {
     PNODE temp = NULL;
 
@@ -52,7 +52,6 @@ void Dispaly(PNODE first)
 int Count(PNODE first)
 {
     int iCount = 0;
-
     PNODE temp = NULL;
 
     temp = first;
@@ -62,40 +61,21 @@ int Count(PNODE first)
         iCount++;
         temp = temp -> next;
     }
-
+    
     return iCount;
 }
 
-int CountPrime(PNODE first)
+int CountLess(PNODE first, int iNo)
 {
     PNODE temp = first;
-    int iNo = 0, iCnt = 0, iCount = 0;
-    bool bPrime = false;
+    int iCount = 0;
 
     while(temp != NULL)
     {
-        iNo = temp->data;
-        bPrime = true;
-
-        if(iNo <= 1)
-        {
-            bPrime = false;
-        }
-
-        for(iCnt = 2; iCnt <= iNo / 2; iCnt++)
-        {
-            if(iNo % iCnt == 0)
-            {
-                bPrime = false;
-                break;
-            }
-        }
-
-        if(bPrime == true)
+        if(temp->data < iNo)
         {
             iCount++;
         }
-
         temp = temp->next;
     }
 
@@ -104,21 +84,24 @@ int CountPrime(PNODE first)
 
 int main()
 {
-    int iRet = 0, iValue = 0;
-    PNODE head = NULL; 
+    int iRet = 0, iValue;
+    PNODE head = NULL;
 
-    InsertFirst(&head, 111);
-    InsertFirst(&head, 101);
+    InsertFirst(&head, 75);
+    InsertFirst(&head, 11);
     InsertFirst(&head, 51);
-    InsertFirst(&head, 21);
+    InsertFirst(&head, 22);
     InsertFirst(&head, 11);
 
-    Dispaly(head);
+    Display(head);
     iRet = Count(head);
-    printf("Number of nodes in linkedlist are : %d\n", iRet);
+    printf("Number of nodes are : %d\n\n", iRet);
 
-    iRet = CountPrime(head);
-    printf("Prime numbers from the linked list are : %d\n", iRet);
+    printf("Enter the number : ");
+    scanf("%d", &iValue);
+
+    iRet = CountLess(head, iValue);
+    printf("Numbers less than %d are : %d", iValue, iRet);
 
     return 0;
 }

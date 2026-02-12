@@ -102,7 +102,7 @@ int main()
     iRet = Count(head);
     printf("Number of nodes are : %d\n\n", iRet);
 
-    printf("Elements of Even positions are : \n");
+    printf("Elements of Even positions are : \n\n");
     DisplayEvenPosition(head);
 
     return 0;
